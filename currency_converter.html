@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <style>
+        /* Currency Converter Styles */
+.curr-converter {
+    background-image: linear-gradient(to bottom, #0099cc, #00cccc);
+    background-color: #0099cc;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.curr-converter label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.curr-converter input[type="number"],
+.curr-converter select {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+}
+
+.curr-converter button[type="button"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.curr-converter button[type="button"]:hover {
+    background-color: #f0f0f0;
+}
+
+.curr-converter p {
+    margin-top: 10px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Currency Converter</h1>
+    <form class="curr-converter">
+        <label for="curr-input">Enter amount:</label>
+        <input type="number" id="curr-input" value="0" min="0">
+        
+        <label for="curr-from">From:</label>
+        <select id="curr-from">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+        </select>
+        
+        <label for="curr-to">To:</label>
+        <select id="curr-to">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+        </select>
+        
+        <button type="button" id="curr-convert-btn">Convert</button>
+        
+        <p id="curr-result"></p>
+    </form>
+    
+    <script src="currency_converter.js"></script>
+</body>
+</html>
